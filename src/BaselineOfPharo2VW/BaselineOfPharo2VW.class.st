@@ -11,22 +11,24 @@ BaselineOfPharo2VW >> baseline: spec [
 		for: #common
 		do: [ spec
 				package: #Pharo2VW with: [ spec requires: #('XMLWriter' 'XMLParser' 'XPath') ];
-				package: #'Pharo2VW-Tests' with: [ spec requires: #('FAMIX' 'Pharo2VW') ];
+				package: #'Pharo2VW-Tests' with: [ spec requires: #('Famix' 'Pharo2VW') ];
 				package: #'Pharo2VW-TestResources' with: [ spec requires: #('Pharo2VW')];
-				project: 'FAMIX'
-					with: [ spec repository: 'http://smalltalkhub.com/mc/Moose/Famix/main'.
-					spec loads: #('Resources').
-					spec version: #bleedingEdge.
-					spec className: 'ConfigurationOfFamix' ];
+				project: 'Famix'
+					with: [ spec
+    	baseline: 'Famix'
+    	with: [ spec repository: 'github://jecisc/Famix:v2.x.x/src' ] ];
 				project: 'XMLWriter'
-					with: [ spec repository: 'http://smalltalkhub.com/mc/PharoExtras/XMLWriter/main'.
-					spec className: 'ConfigurationOfXMLWriter' ];
+					with: [ spec
+    	baseline: 'XMLWriter'
+    	with: [ spec repository: 'github://pharo-contributions/XML-XMLWriter/src' ] ];
 				project: 'XMLParser'
-					with: [ spec repository: 'http://smalltalkhub.com/mc/PharoExtras/XMLParser/main'.
-					spec className: 'ConfigurationOfXMLParser' ];
+					with: [ spec
+    	baseline: 'XMLParser'
+    	with: [ spec repository: 'github://pharo-contributions/XML-XMLParser/src' ] ];
 				project: 'XPath'
-					with: [ spec repository: 'http://smalltalkhub.com/mc/PharoExtras/XPath/main'.
-					spec className: 'ConfigurationOfXPath' ].
+					with: [ spec
+    	baseline: 'XPath'
+    	with: [ spec repository: 'github://pharo-contributions/XML-XPath/src' ] ].
 			spec
 				group: 'default' with: #('core' 'tests');
 				group: 'core' with: #('Pharo2VW');

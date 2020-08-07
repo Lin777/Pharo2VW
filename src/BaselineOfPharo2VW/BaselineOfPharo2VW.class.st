@@ -16,9 +16,9 @@ BaselineOfPharo2VW >> baseline: spec [
     	baseline: 'Famix'
     	with: [ spec repository: 'github://jecisc/Famix:v2.x.x/src' ];
     	baseline: 'XMLWriter'
-    	with: [ spec repository: 'github://pharo-contributions/XML-XMLWriter/src'];
+    	with: [ spec repository: 'github://pharo-contributions/XML-XMLWriter:2.9.x/src'];
     	baseline: 'XMLParser'
-    	with: [ spec repository: 'github://pharo-contributions/XML-XMLParser/src'];
+    	with: [ spec repository: 'github://pharo-contributions/XML-XMLParser:3.5.x/src'];
     	baseline: 'XPath'
     	with: [ spec repository: 'github://pharo-contributions/XML-XPath/src' ] .
 			spec

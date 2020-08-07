@@ -13,22 +13,14 @@ BaselineOfPharo2VW >> baseline: spec [
 				package: #Pharo2VW with: [ spec requires: #('XMLWriter' 'XMLParser' 'XPath') ];
 				package: #'Pharo2VW-Tests' with: [ spec requires: #('Famix' 'Pharo2VW') ];
 				package: #'Pharo2VW-TestResources' with: [ spec requires: #('Pharo2VW')];
-				project: 'Famix'
-					with: [ spec
     	baseline: 'Famix'
-    	with: [ spec repository: 'github://jecisc/Famix:v2.x.x/src' ] ];
-				project: 'XMLWriter'
-					with: [ spec
+    	with: [ spec repository: 'github://jecisc/Famix:v2.x.x/src' ];
     	baseline: 'XMLWriter'
-    	with: [ spec repository: 'github://pharo-contributions/XML-XMLWriter/src' ] ];
-				project: 'XMLParser'
-					with: [ spec
+    	with: [ spec repository: 'github://pharo-contributions/XML-XMLWriter/src'];
     	baseline: 'XMLParser'
-    	with: [ spec repository: 'github://pharo-contributions/XML-XMLParser/src' ] ];
-				project: 'XPath'
-					with: [ spec
+    	with: [ spec repository: 'github://pharo-contributions/XML-XMLParser/src'];
     	baseline: 'XPath'
-    	with: [ spec repository: 'github://pharo-contributions/XML-XPath/src' ] ].
+    	with: [ spec repository: 'github://pharo-contributions/XML-XPath/src' ] .
 			spec
 				group: 'default' with: #('core' 'tests');
 				group: 'core' with: #('Pharo2VW');
